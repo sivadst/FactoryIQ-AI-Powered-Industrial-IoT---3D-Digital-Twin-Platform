@@ -1,0 +1,845 @@
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:apscheduler.scheduler:Scheduler has been shut down
+INFO:     Application shutdown complete.
+INFO:     Finished server process [119217]
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:     Started server process [140291]
+INFO:     Waiting for application startup.
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "generate_and_insert_telemetry" to job store "default"
+INFO:apscheduler.scheduler:Added job "calculate_and_store_oee" to job store "default"
+INFO:apscheduler.scheduler:Added job "generate_work_orders" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:02 UTC)" (scheduled at 2026-06-28 09:51:01.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:02 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:03 UTC)" (scheduled at 2026-06-28 09:51:02.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:03 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:04 UTC)" (scheduled at 2026-06-28 09:51:03.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:04 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:05 UTC)" (scheduled at 2026-06-28 09:51:04.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:05 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:06 UTC)" (scheduled at 2026-06-28 09:51:05.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:06 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:07 UTC)" (scheduled at 2026-06-28 09:51:06.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:07 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:08 UTC)" (scheduled at 2026-06-28 09:51:07.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:08 UTC)" executed successfully
+CMAPSS dataset already exists.
+Factory Simulator started.
+INFO:     127.0.0.1:60322 - "POST /api/v1/auth/login/access-token HTTP/1.1" 200 OK
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:09 UTC)" (scheduled at 2026-06-28 09:51:08.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:09 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:10 UTC)" (scheduled at 2026-06-28 09:51:09.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:10 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:11 UTC)" (scheduled at 2026-06-28 09:51:10.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:11 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:12 UTC)" (scheduled at 2026-06-28 09:51:11.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:12 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:13 UTC)" (scheduled at 2026-06-28 09:51:12.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:13 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:14 UTC)" (scheduled at 2026-06-28 09:51:13.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:14 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:15 UTC)" (scheduled at 2026-06-28 09:51:14.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:15 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:16 UTC)" (scheduled at 2026-06-28 09:51:15.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:16 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:17 UTC)" (scheduled at 2026-06-28 09:51:16.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:17 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:18 UTC)" (scheduled at 2026-06-28 09:51:17.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:18 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:19 UTC)" (scheduled at 2026-06-28 09:51:18.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:19 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:20 UTC)" (scheduled at 2026-06-28 09:51:19.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:20 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:21 UTC)" (scheduled at 2026-06-28 09:51:20.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:21 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:22 UTC)" (scheduled at 2026-06-28 09:51:21.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:22 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:23 UTC)" (scheduled at 2026-06-28 09:51:22.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:23 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:24 UTC)" (scheduled at 2026-06-28 09:51:23.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:24 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:25 UTC)" (scheduled at 2026-06-28 09:51:24.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:25 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:26 UTC)" (scheduled at 2026-06-28 09:51:25.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:26 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:27 UTC)" (scheduled at 2026-06-28 09:51:26.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:27 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:28 UTC)" (scheduled at 2026-06-28 09:51:27.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:28 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:29 UTC)" (scheduled at 2026-06-28 09:51:28.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:29 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:30 UTC)" (scheduled at 2026-06-28 09:51:29.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:30 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:31 UTC)" (scheduled at 2026-06-28 09:51:30.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:31 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:32 UTC)" (scheduled at 2026-06-28 09:51:31.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:32 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:33 UTC)" (scheduled at 2026-06-28 09:51:32.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:33 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:34 UTC)" (scheduled at 2026-06-28 09:51:33.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:34 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:35 UTC)" (scheduled at 2026-06-28 09:51:34.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:35 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:36 UTC)" (scheduled at 2026-06-28 09:51:35.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:36 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:37 UTC)" (scheduled at 2026-06-28 09:51:36.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:37 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:38 UTC)" (scheduled at 2026-06-28 09:51:37.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:38 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:39 UTC)" (scheduled at 2026-06-28 09:51:38.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:39 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:40 UTC)" (scheduled at 2026-06-28 09:51:39.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:40 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:41 UTC)" (scheduled at 2026-06-28 09:51:40.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:41 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:42 UTC)" (scheduled at 2026-06-28 09:51:41.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:42 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:43 UTC)" (scheduled at 2026-06-28 09:51:42.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:43 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:44 UTC)" (scheduled at 2026-06-28 09:51:43.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:44 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:45 UTC)" (scheduled at 2026-06-28 09:51:44.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:45 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:46 UTC)" (scheduled at 2026-06-28 09:51:45.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:46 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:47 UTC)" (scheduled at 2026-06-28 09:51:46.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:47 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:48 UTC)" (scheduled at 2026-06-28 09:51:47.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:48 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:49 UTC)" (scheduled at 2026-06-28 09:51:48.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:49 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:50 UTC)" (scheduled at 2026-06-28 09:51:49.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:50 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:51 UTC)" (scheduled at 2026-06-28 09:51:50.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:51 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:52 UTC)" (scheduled at 2026-06-28 09:51:51.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:52 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:53 UTC)" (scheduled at 2026-06-28 09:51:52.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:53 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:54 UTC)" (scheduled at 2026-06-28 09:51:53.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:54 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:55 UTC)" (scheduled at 2026-06-28 09:51:54.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:55 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:56 UTC)" (scheduled at 2026-06-28 09:51:55.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:56 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:57 UTC)" (scheduled at 2026-06-28 09:51:56.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:57 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:58 UTC)" (scheduled at 2026-06-28 09:51:57.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:58 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:59 UTC)" (scheduled at 2026-06-28 09:51:58.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:51:59 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:00 UTC)" (scheduled at 2026-06-28 09:51:59.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:00 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:01 UTC)" (scheduled at 2026-06-28 09:52:00.110728+00:00)
+INFO:apscheduler.executors.default:Running job "calculate_and_store_oee (trigger: interval[0:01:00], next run at: 2026-06-28 09:53:00 UTC)" (scheduled at 2026-06-28 09:52:00.382841+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:01 UTC)" executed successfully
+INFO:apscheduler.executors.default:Job "calculate_and_store_oee (trigger: interval[0:01:00], next run at: 2026-06-28 09:53:00 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:02 UTC)" (scheduled at 2026-06-28 09:52:01.110728+00:00)
+WARNING:apscheduler.scheduler:Execution of job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:02 UTC)" skipped: maximum number of running instances reached (1)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:03 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:04 UTC)" (scheduled at 2026-06-28 09:52:03.110728+00:00)
+WARNING:apscheduler.scheduler:Execution of job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:04 UTC)" skipped: maximum number of running instances reached (1)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:07 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:08 UTC)" (scheduled at 2026-06-28 09:52:07.110728+00:00)
+WARNING:apscheduler.scheduler:Execution of job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:08 UTC)" skipped: maximum number of running instances reached (1)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:12 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:13 UTC)" (scheduled at 2026-06-28 09:52:12.110728+00:00)
+WARNING:apscheduler.scheduler:Execution of job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:13 UTC)" skipped: maximum number of running instances reached (1)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:16 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:17 UTC)" (scheduled at 2026-06-28 09:52:16.110728+00:00)
+WARNING:apscheduler.scheduler:Execution of job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:17 UTC)" skipped: maximum number of running instances reached (1)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:19 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:20 UTC)" (scheduled at 2026-06-28 09:52:19.110728+00:00)
+WARNING:apscheduler.scheduler:Execution of job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:20 UTC)" skipped: maximum number of running instances reached (1)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:23 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:24 UTC)" (scheduled at 2026-06-28 09:52:23.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:24 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:25 UTC)" (scheduled at 2026-06-28 09:52:24.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:25 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:26 UTC)" (scheduled at 2026-06-28 09:52:25.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:26 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:27 UTC)" (scheduled at 2026-06-28 09:52:26.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:27 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:28 UTC)" (scheduled at 2026-06-28 09:52:27.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:28 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:29 UTC)" (scheduled at 2026-06-28 09:52:28.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:29 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:30 UTC)" (scheduled at 2026-06-28 09:52:29.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:30 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:31 UTC)" (scheduled at 2026-06-28 09:52:30.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:31 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:32 UTC)" (scheduled at 2026-06-28 09:52:31.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:32 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:33 UTC)" (scheduled at 2026-06-28 09:52:32.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:33 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:34 UTC)" (scheduled at 2026-06-28 09:52:33.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:34 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:35 UTC)" (scheduled at 2026-06-28 09:52:34.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:35 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:36 UTC)" (scheduled at 2026-06-28 09:52:35.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:36 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:37 UTC)" (scheduled at 2026-06-28 09:52:36.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:37 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:38 UTC)" (scheduled at 2026-06-28 09:52:37.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:38 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:39 UTC)" (scheduled at 2026-06-28 09:52:38.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:39 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:40 UTC)" (scheduled at 2026-06-28 09:52:39.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:40 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:41 UTC)" (scheduled at 2026-06-28 09:52:40.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:41 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:42 UTC)" (scheduled at 2026-06-28 09:52:41.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:42 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:43 UTC)" (scheduled at 2026-06-28 09:52:42.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:43 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:44 UTC)" (scheduled at 2026-06-28 09:52:43.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:44 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:45 UTC)" (scheduled at 2026-06-28 09:52:44.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:45 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:46 UTC)" (scheduled at 2026-06-28 09:52:45.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:46 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:47 UTC)" (scheduled at 2026-06-28 09:52:46.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:47 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:48 UTC)" (scheduled at 2026-06-28 09:52:47.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:48 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:49 UTC)" (scheduled at 2026-06-28 09:52:48.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:49 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:50 UTC)" (scheduled at 2026-06-28 09:52:49.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:50 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:51 UTC)" (scheduled at 2026-06-28 09:52:50.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:51 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:52 UTC)" (scheduled at 2026-06-28 09:52:51.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:52 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:53 UTC)" (scheduled at 2026-06-28 09:52:52.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:53 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:54 UTC)" (scheduled at 2026-06-28 09:52:53.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:54 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:55 UTC)" (scheduled at 2026-06-28 09:52:54.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:55 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:56 UTC)" (scheduled at 2026-06-28 09:52:55.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:56 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:57 UTC)" (scheduled at 2026-06-28 09:52:56.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:57 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:58 UTC)" (scheduled at 2026-06-28 09:52:57.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:58 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:59 UTC)" (scheduled at 2026-06-28 09:52:58.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:52:59 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:00 UTC)" (scheduled at 2026-06-28 09:52:59.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:00 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:01 UTC)" (scheduled at 2026-06-28 09:53:00.110728+00:00)
+INFO:apscheduler.executors.default:Running job "calculate_and_store_oee (trigger: interval[0:01:00], next run at: 2026-06-28 09:54:00 UTC)" (scheduled at 2026-06-28 09:53:00.382841+00:00)
+INFO:apscheduler.executors.default:Running job "generate_work_orders (trigger: interval[0:02:00], next run at: 2026-06-28 09:55:00 UTC)" (scheduled at 2026-06-28 09:53:00.383492+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:01 UTC)" executed successfully
+INFO:apscheduler.executors.default:Job "calculate_and_store_oee (trigger: interval[0:01:00], next run at: 2026-06-28 09:54:00 UTC)" executed successfully
+INFO:apscheduler.executors.default:Job "generate_work_orders (trigger: interval[0:02:00], next run at: 2026-06-28 09:55:00 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:02 UTC)" (scheduled at 2026-06-28 09:53:01.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:02 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:03 UTC)" (scheduled at 2026-06-28 09:53:02.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:03 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:04 UTC)" (scheduled at 2026-06-28 09:53:03.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:04 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:05 UTC)" (scheduled at 2026-06-28 09:53:04.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:05 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:06 UTC)" (scheduled at 2026-06-28 09:53:05.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:06 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:07 UTC)" (scheduled at 2026-06-28 09:53:06.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:07 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:08 UTC)" (scheduled at 2026-06-28 09:53:07.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:08 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:09 UTC)" (scheduled at 2026-06-28 09:53:08.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:09 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:10 UTC)" (scheduled at 2026-06-28 09:53:09.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:10 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:11 UTC)" (scheduled at 2026-06-28 09:53:10.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:11 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:12 UTC)" (scheduled at 2026-06-28 09:53:11.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:12 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:13 UTC)" (scheduled at 2026-06-28 09:53:12.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:13 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:14 UTC)" (scheduled at 2026-06-28 09:53:13.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:14 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:15 UTC)" (scheduled at 2026-06-28 09:53:14.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:15 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:16 UTC)" (scheduled at 2026-06-28 09:53:15.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:16 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:17 UTC)" (scheduled at 2026-06-28 09:53:16.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:17 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:18 UTC)" (scheduled at 2026-06-28 09:53:17.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:18 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:19 UTC)" (scheduled at 2026-06-28 09:53:18.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:19 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:20 UTC)" (scheduled at 2026-06-28 09:53:19.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:20 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:21 UTC)" (scheduled at 2026-06-28 09:53:20.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:21 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:22 UTC)" (scheduled at 2026-06-28 09:53:21.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:22 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:23 UTC)" (scheduled at 2026-06-28 09:53:22.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:23 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:24 UTC)" (scheduled at 2026-06-28 09:53:23.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:24 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:25 UTC)" (scheduled at 2026-06-28 09:53:24.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:25 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:26 UTC)" (scheduled at 2026-06-28 09:53:25.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:26 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:27 UTC)" (scheduled at 2026-06-28 09:53:26.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:27 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:28 UTC)" (scheduled at 2026-06-28 09:53:27.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:28 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:29 UTC)" (scheduled at 2026-06-28 09:53:28.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:29 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:30 UTC)" (scheduled at 2026-06-28 09:53:29.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:30 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:31 UTC)" (scheduled at 2026-06-28 09:53:30.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:31 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:32 UTC)" (scheduled at 2026-06-28 09:53:31.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:32 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:33 UTC)" (scheduled at 2026-06-28 09:53:32.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:33 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:34 UTC)" (scheduled at 2026-06-28 09:53:33.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:34 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:35 UTC)" (scheduled at 2026-06-28 09:53:34.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:35 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:36 UTC)" (scheduled at 2026-06-28 09:53:35.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:36 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:37 UTC)" (scheduled at 2026-06-28 09:53:36.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:37 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:38 UTC)" (scheduled at 2026-06-28 09:53:37.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:38 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:39 UTC)" (scheduled at 2026-06-28 09:53:38.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:39 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:40 UTC)" (scheduled at 2026-06-28 09:53:39.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:40 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:41 UTC)" (scheduled at 2026-06-28 09:53:40.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:41 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:42 UTC)" (scheduled at 2026-06-28 09:53:41.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:42 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:43 UTC)" (scheduled at 2026-06-28 09:53:42.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:43 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:44 UTC)" (scheduled at 2026-06-28 09:53:43.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:44 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:45 UTC)" (scheduled at 2026-06-28 09:53:44.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:45 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:46 UTC)" (scheduled at 2026-06-28 09:53:45.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:46 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:47 UTC)" (scheduled at 2026-06-28 09:53:46.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:47 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:48 UTC)" (scheduled at 2026-06-28 09:53:47.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:48 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:49 UTC)" (scheduled at 2026-06-28 09:53:48.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:49 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:50 UTC)" (scheduled at 2026-06-28 09:53:49.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:50 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:51 UTC)" (scheduled at 2026-06-28 09:53:50.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:51 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:52 UTC)" (scheduled at 2026-06-28 09:53:51.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:52 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:53 UTC)" (scheduled at 2026-06-28 09:53:52.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:53 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:54 UTC)" (scheduled at 2026-06-28 09:53:53.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:54 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:55 UTC)" (scheduled at 2026-06-28 09:53:54.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:55 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:56 UTC)" (scheduled at 2026-06-28 09:53:55.110728+00:00)
+WARNING:apscheduler.scheduler:Execution of job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:56 UTC)" skipped: maximum number of running instances reached (1)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:57 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:58 UTC)" (scheduled at 2026-06-28 09:53:57.110728+00:00)
+WARNING:apscheduler.scheduler:Execution of job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:58 UTC)" skipped: maximum number of running instances reached (1)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:53:59 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:00 UTC)" (scheduled at 2026-06-28 09:53:59.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:00 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:01 UTC)" (scheduled at 2026-06-28 09:54:00.110728+00:00)
+WARNING:apscheduler.scheduler:Execution of job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:01 UTC)" skipped: maximum number of running instances reached (1)
+WARNING:apscheduler.executors.default:Run time of job "calculate_and_store_oee (trigger: interval[0:01:00], next run at: 2026-06-28 09:55:00 UTC)" was missed by 0:00:01.942886
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:03 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:04 UTC)" (scheduled at 2026-06-28 09:54:03.110728+00:00)
+WARNING:apscheduler.scheduler:Execution of job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:04 UTC)" skipped: maximum number of running instances reached (1)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:09 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:10 UTC)" (scheduled at 2026-06-28 09:54:09.110728+00:00)
+WARNING:apscheduler.scheduler:Execution of job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:10 UTC)" skipped: maximum number of running instances reached (1)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:11 UTC)" executed successfully
+WARNING:apscheduler.scheduler:Execution of job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:11 UTC)" skipped: maximum number of running instances reached (1)
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:13 UTC)" (scheduled at 2026-06-28 09:54:12.110728+00:00)
+WARNING:apscheduler.scheduler:Execution of job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:13 UTC)" skipped: maximum number of running instances reached (1)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:15 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:16 UTC)" (scheduled at 2026-06-28 09:54:15.110728+00:00)
+WARNING:apscheduler.scheduler:Execution of job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:16 UTC)" skipped: maximum number of running instances reached (1)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:19 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:20 UTC)" (scheduled at 2026-06-28 09:54:19.110728+00:00)
+WARNING:apscheduler.scheduler:Execution of job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:20 UTC)" skipped: maximum number of running instances reached (1)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:22 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:23 UTC)" (scheduled at 2026-06-28 09:54:22.110728+00:00)
+WARNING:apscheduler.scheduler:Execution of job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:23 UTC)" skipped: maximum number of running instances reached (1)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:25 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:26 UTC)" (scheduled at 2026-06-28 09:54:25.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:26 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:27 UTC)" (scheduled at 2026-06-28 09:54:26.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:27 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:28 UTC)" (scheduled at 2026-06-28 09:54:27.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:28 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:29 UTC)" (scheduled at 2026-06-28 09:54:28.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:29 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:30 UTC)" (scheduled at 2026-06-28 09:54:29.110728+00:00)
+WARNING:apscheduler.scheduler:Execution of job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:30 UTC)" skipped: maximum number of running instances reached (1)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:31 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:32 UTC)" (scheduled at 2026-06-28 09:54:31.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:32 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:33 UTC)" (scheduled at 2026-06-28 09:54:32.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:33 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:34 UTC)" (scheduled at 2026-06-28 09:54:33.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:34 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:35 UTC)" (scheduled at 2026-06-28 09:54:34.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:35 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:36 UTC)" (scheduled at 2026-06-28 09:54:35.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:36 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:37 UTC)" (scheduled at 2026-06-28 09:54:36.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:37 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:38 UTC)" (scheduled at 2026-06-28 09:54:37.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:38 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:39 UTC)" (scheduled at 2026-06-28 09:54:38.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:39 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:40 UTC)" (scheduled at 2026-06-28 09:54:39.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:40 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:41 UTC)" (scheduled at 2026-06-28 09:54:40.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:41 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:42 UTC)" (scheduled at 2026-06-28 09:54:41.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:42 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:43 UTC)" (scheduled at 2026-06-28 09:54:42.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:43 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:44 UTC)" (scheduled at 2026-06-28 09:54:43.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:44 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:45 UTC)" (scheduled at 2026-06-28 09:54:44.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:45 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:46 UTC)" (scheduled at 2026-06-28 09:54:45.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:46 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:47 UTC)" (scheduled at 2026-06-28 09:54:46.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:47 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:48 UTC)" (scheduled at 2026-06-28 09:54:47.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:48 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:49 UTC)" (scheduled at 2026-06-28 09:54:48.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:49 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:50 UTC)" (scheduled at 2026-06-28 09:54:49.110728+00:00)
+WARNING:apscheduler.scheduler:Execution of job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:50 UTC)" skipped: maximum number of running instances reached (1)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:51 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:52 UTC)" (scheduled at 2026-06-28 09:54:51.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:52 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:53 UTC)" (scheduled at 2026-06-28 09:54:52.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:53 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:54 UTC)" (scheduled at 2026-06-28 09:54:53.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:54 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:55 UTC)" (scheduled at 2026-06-28 09:54:54.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:55 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:56 UTC)" (scheduled at 2026-06-28 09:54:55.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:56 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:57 UTC)" (scheduled at 2026-06-28 09:54:56.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:57 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:58 UTC)" (scheduled at 2026-06-28 09:54:57.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:58 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:59 UTC)" (scheduled at 2026-06-28 09:54:58.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:54:59 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:00 UTC)" (scheduled at 2026-06-28 09:54:59.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:00 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:01 UTC)" (scheduled at 2026-06-28 09:55:00.110728+00:00)
+INFO:apscheduler.executors.default:Running job "calculate_and_store_oee (trigger: interval[0:01:00], next run at: 2026-06-28 09:56:00 UTC)" (scheduled at 2026-06-28 09:55:00.382841+00:00)
+INFO:apscheduler.executors.default:Running job "generate_work_orders (trigger: interval[0:02:00], next run at: 2026-06-28 09:57:00 UTC)" (scheduled at 2026-06-28 09:55:00.383492+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:01 UTC)" executed successfully
+INFO:apscheduler.executors.default:Job "calculate_and_store_oee (trigger: interval[0:01:00], next run at: 2026-06-28 09:56:00 UTC)" executed successfully
+INFO:apscheduler.executors.default:Job "generate_work_orders (trigger: interval[0:02:00], next run at: 2026-06-28 09:57:00 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:02 UTC)" (scheduled at 2026-06-28 09:55:01.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:02 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:03 UTC)" (scheduled at 2026-06-28 09:55:02.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:03 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:04 UTC)" (scheduled at 2026-06-28 09:55:03.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:04 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:05 UTC)" (scheduled at 2026-06-28 09:55:04.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:05 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:06 UTC)" (scheduled at 2026-06-28 09:55:05.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:06 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:07 UTC)" (scheduled at 2026-06-28 09:55:06.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:07 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:08 UTC)" (scheduled at 2026-06-28 09:55:07.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:08 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:09 UTC)" (scheduled at 2026-06-28 09:55:08.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:09 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:10 UTC)" (scheduled at 2026-06-28 09:55:09.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:10 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:11 UTC)" (scheduled at 2026-06-28 09:55:10.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:11 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:12 UTC)" (scheduled at 2026-06-28 09:55:11.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:12 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:13 UTC)" (scheduled at 2026-06-28 09:55:12.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:13 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:14 UTC)" (scheduled at 2026-06-28 09:55:13.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:14 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:15 UTC)" (scheduled at 2026-06-28 09:55:14.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:15 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:16 UTC)" (scheduled at 2026-06-28 09:55:15.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:16 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:17 UTC)" (scheduled at 2026-06-28 09:55:16.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:17 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:18 UTC)" (scheduled at 2026-06-28 09:55:17.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:18 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:19 UTC)" (scheduled at 2026-06-28 09:55:18.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:19 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:20 UTC)" (scheduled at 2026-06-28 09:55:19.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:20 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:21 UTC)" (scheduled at 2026-06-28 09:55:20.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:21 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:22 UTC)" (scheduled at 2026-06-28 09:55:21.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:22 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:23 UTC)" (scheduled at 2026-06-28 09:55:22.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:23 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:24 UTC)" (scheduled at 2026-06-28 09:55:23.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:24 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:25 UTC)" (scheduled at 2026-06-28 09:55:24.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:25 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:26 UTC)" (scheduled at 2026-06-28 09:55:25.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:26 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:27 UTC)" (scheduled at 2026-06-28 09:55:26.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:27 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:28 UTC)" (scheduled at 2026-06-28 09:55:27.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:28 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:29 UTC)" (scheduled at 2026-06-28 09:55:28.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:29 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:30 UTC)" (scheduled at 2026-06-28 09:55:29.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:30 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:31 UTC)" (scheduled at 2026-06-28 09:55:30.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:31 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:32 UTC)" (scheduled at 2026-06-28 09:55:31.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:32 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:33 UTC)" (scheduled at 2026-06-28 09:55:32.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:33 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:34 UTC)" (scheduled at 2026-06-28 09:55:33.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:34 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:35 UTC)" (scheduled at 2026-06-28 09:55:34.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:35 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:36 UTC)" (scheduled at 2026-06-28 09:55:35.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:36 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:37 UTC)" (scheduled at 2026-06-28 09:55:36.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:37 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:38 UTC)" (scheduled at 2026-06-28 09:55:37.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:38 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:39 UTC)" (scheduled at 2026-06-28 09:55:38.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:39 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:40 UTC)" (scheduled at 2026-06-28 09:55:39.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:40 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:41 UTC)" (scheduled at 2026-06-28 09:55:40.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:41 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:42 UTC)" (scheduled at 2026-06-28 09:55:41.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:42 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:43 UTC)" (scheduled at 2026-06-28 09:55:42.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:43 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:44 UTC)" (scheduled at 2026-06-28 09:55:43.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:44 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:45 UTC)" (scheduled at 2026-06-28 09:55:44.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:45 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:46 UTC)" (scheduled at 2026-06-28 09:55:45.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:46 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:47 UTC)" (scheduled at 2026-06-28 09:55:46.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:47 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:48 UTC)" (scheduled at 2026-06-28 09:55:47.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:48 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:49 UTC)" (scheduled at 2026-06-28 09:55:48.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:49 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:50 UTC)" (scheduled at 2026-06-28 09:55:49.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:50 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:51 UTC)" (scheduled at 2026-06-28 09:55:50.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:51 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:52 UTC)" (scheduled at 2026-06-28 09:55:51.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:52 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:53 UTC)" (scheduled at 2026-06-28 09:55:52.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:53 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:54 UTC)" (scheduled at 2026-06-28 09:55:53.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:54 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:55 UTC)" (scheduled at 2026-06-28 09:55:54.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:55 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:56 UTC)" (scheduled at 2026-06-28 09:55:55.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:56 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:57 UTC)" (scheduled at 2026-06-28 09:55:56.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:57 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:58 UTC)" (scheduled at 2026-06-28 09:55:57.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:58 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:59 UTC)" (scheduled at 2026-06-28 09:55:58.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:55:59 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:00 UTC)" (scheduled at 2026-06-28 09:55:59.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:00 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:01 UTC)" (scheduled at 2026-06-28 09:56:00.110728+00:00)
+INFO:apscheduler.executors.default:Running job "calculate_and_store_oee (trigger: interval[0:01:00], next run at: 2026-06-28 09:57:00 UTC)" (scheduled at 2026-06-28 09:56:00.382841+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:01 UTC)" executed successfully
+INFO:apscheduler.executors.default:Job "calculate_and_store_oee (trigger: interval[0:01:00], next run at: 2026-06-28 09:57:00 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:02 UTC)" (scheduled at 2026-06-28 09:56:01.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:02 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:03 UTC)" (scheduled at 2026-06-28 09:56:02.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:03 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:04 UTC)" (scheduled at 2026-06-28 09:56:03.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:04 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:05 UTC)" (scheduled at 2026-06-28 09:56:04.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:05 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:06 UTC)" (scheduled at 2026-06-28 09:56:05.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:06 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:07 UTC)" (scheduled at 2026-06-28 09:56:06.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:07 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:08 UTC)" (scheduled at 2026-06-28 09:56:07.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:08 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:09 UTC)" (scheduled at 2026-06-28 09:56:08.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:09 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:10 UTC)" (scheduled at 2026-06-28 09:56:09.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:10 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:11 UTC)" (scheduled at 2026-06-28 09:56:10.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:11 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:12 UTC)" (scheduled at 2026-06-28 09:56:11.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:12 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:13 UTC)" (scheduled at 2026-06-28 09:56:12.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:13 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:14 UTC)" (scheduled at 2026-06-28 09:56:13.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:14 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:15 UTC)" (scheduled at 2026-06-28 09:56:14.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:15 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:16 UTC)" (scheduled at 2026-06-28 09:56:15.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:16 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:17 UTC)" (scheduled at 2026-06-28 09:56:16.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:17 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:18 UTC)" (scheduled at 2026-06-28 09:56:17.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:18 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:19 UTC)" (scheduled at 2026-06-28 09:56:18.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:19 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:20 UTC)" (scheduled at 2026-06-28 09:56:19.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:20 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:21 UTC)" (scheduled at 2026-06-28 09:56:20.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:21 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:22 UTC)" (scheduled at 2026-06-28 09:56:21.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:22 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:23 UTC)" (scheduled at 2026-06-28 09:56:22.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:23 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:24 UTC)" (scheduled at 2026-06-28 09:56:23.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:24 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:25 UTC)" (scheduled at 2026-06-28 09:56:24.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:25 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:26 UTC)" (scheduled at 2026-06-28 09:56:25.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:26 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:27 UTC)" (scheduled at 2026-06-28 09:56:26.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:27 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:28 UTC)" (scheduled at 2026-06-28 09:56:27.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:28 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:29 UTC)" (scheduled at 2026-06-28 09:56:28.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:29 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:30 UTC)" (scheduled at 2026-06-28 09:56:29.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:30 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:31 UTC)" (scheduled at 2026-06-28 09:56:30.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:31 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:32 UTC)" (scheduled at 2026-06-28 09:56:31.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:32 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:33 UTC)" (scheduled at 2026-06-28 09:56:32.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:33 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:34 UTC)" (scheduled at 2026-06-28 09:56:33.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:34 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:35 UTC)" (scheduled at 2026-06-28 09:56:34.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:35 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:36 UTC)" (scheduled at 2026-06-28 09:56:35.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:36 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:37 UTC)" (scheduled at 2026-06-28 09:56:36.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:37 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:38 UTC)" (scheduled at 2026-06-28 09:56:37.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:38 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:39 UTC)" (scheduled at 2026-06-28 09:56:38.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:39 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:40 UTC)" (scheduled at 2026-06-28 09:56:39.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:40 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:41 UTC)" (scheduled at 2026-06-28 09:56:40.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:41 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:42 UTC)" (scheduled at 2026-06-28 09:56:41.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:42 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:43 UTC)" (scheduled at 2026-06-28 09:56:42.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:43 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:44 UTC)" (scheduled at 2026-06-28 09:56:43.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:44 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:45 UTC)" (scheduled at 2026-06-28 09:56:44.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:45 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:46 UTC)" (scheduled at 2026-06-28 09:56:45.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:46 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:47 UTC)" (scheduled at 2026-06-28 09:56:46.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:47 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:48 UTC)" (scheduled at 2026-06-28 09:56:47.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:48 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:49 UTC)" (scheduled at 2026-06-28 09:56:48.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:49 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:50 UTC)" (scheduled at 2026-06-28 09:56:49.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:50 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:51 UTC)" (scheduled at 2026-06-28 09:56:50.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:51 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:52 UTC)" (scheduled at 2026-06-28 09:56:51.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:52 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:53 UTC)" (scheduled at 2026-06-28 09:56:52.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:53 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:54 UTC)" (scheduled at 2026-06-28 09:56:53.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:54 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:55 UTC)" (scheduled at 2026-06-28 09:56:54.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:55 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:56 UTC)" (scheduled at 2026-06-28 09:56:55.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:56 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:57 UTC)" (scheduled at 2026-06-28 09:56:56.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:57 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:58 UTC)" (scheduled at 2026-06-28 09:56:57.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:58 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:59 UTC)" (scheduled at 2026-06-28 09:56:58.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:56:59 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:00 UTC)" (scheduled at 2026-06-28 09:56:59.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:00 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:01 UTC)" (scheduled at 2026-06-28 09:57:00.110728+00:00)
+INFO:apscheduler.executors.default:Running job "calculate_and_store_oee (trigger: interval[0:01:00], next run at: 2026-06-28 09:58:00 UTC)" (scheduled at 2026-06-28 09:57:00.382841+00:00)
+INFO:apscheduler.executors.default:Running job "generate_work_orders (trigger: interval[0:02:00], next run at: 2026-06-28 09:59:00 UTC)" (scheduled at 2026-06-28 09:57:00.383492+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:01 UTC)" executed successfully
+INFO:apscheduler.executors.default:Job "calculate_and_store_oee (trigger: interval[0:01:00], next run at: 2026-06-28 09:58:00 UTC)" executed successfully
+INFO:apscheduler.executors.default:Job "generate_work_orders (trigger: interval[0:02:00], next run at: 2026-06-28 09:59:00 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:02 UTC)" (scheduled at 2026-06-28 09:57:01.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:02 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:03 UTC)" (scheduled at 2026-06-28 09:57:02.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:03 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:04 UTC)" (scheduled at 2026-06-28 09:57:03.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:04 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:05 UTC)" (scheduled at 2026-06-28 09:57:04.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:05 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:06 UTC)" (scheduled at 2026-06-28 09:57:05.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:06 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:07 UTC)" (scheduled at 2026-06-28 09:57:06.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:07 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:08 UTC)" (scheduled at 2026-06-28 09:57:07.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:08 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:09 UTC)" (scheduled at 2026-06-28 09:57:08.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:09 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:10 UTC)" (scheduled at 2026-06-28 09:57:09.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:10 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:11 UTC)" (scheduled at 2026-06-28 09:57:10.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:11 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:12 UTC)" (scheduled at 2026-06-28 09:57:11.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:12 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:13 UTC)" (scheduled at 2026-06-28 09:57:12.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:13 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:14 UTC)" (scheduled at 2026-06-28 09:57:13.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:14 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:15 UTC)" (scheduled at 2026-06-28 09:57:14.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:15 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:16 UTC)" (scheduled at 2026-06-28 09:57:15.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:16 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:17 UTC)" (scheduled at 2026-06-28 09:57:16.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:17 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:18 UTC)" (scheduled at 2026-06-28 09:57:17.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:18 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:19 UTC)" (scheduled at 2026-06-28 09:57:18.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:19 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:20 UTC)" (scheduled at 2026-06-28 09:57:19.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:20 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:21 UTC)" (scheduled at 2026-06-28 09:57:20.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:21 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:22 UTC)" (scheduled at 2026-06-28 09:57:21.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:22 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:23 UTC)" (scheduled at 2026-06-28 09:57:22.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:23 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:24 UTC)" (scheduled at 2026-06-28 09:57:23.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:24 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:25 UTC)" (scheduled at 2026-06-28 09:57:24.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:25 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:26 UTC)" (scheduled at 2026-06-28 09:57:25.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:26 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:27 UTC)" (scheduled at 2026-06-28 09:57:26.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:27 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:28 UTC)" (scheduled at 2026-06-28 09:57:27.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:28 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:29 UTC)" (scheduled at 2026-06-28 09:57:28.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:29 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:30 UTC)" (scheduled at 2026-06-28 09:57:29.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:30 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:31 UTC)" (scheduled at 2026-06-28 09:57:30.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:31 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:32 UTC)" (scheduled at 2026-06-28 09:57:31.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:32 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:33 UTC)" (scheduled at 2026-06-28 09:57:32.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:33 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:34 UTC)" (scheduled at 2026-06-28 09:57:33.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:34 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:35 UTC)" (scheduled at 2026-06-28 09:57:34.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:35 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:36 UTC)" (scheduled at 2026-06-28 09:57:35.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:36 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:37 UTC)" (scheduled at 2026-06-28 09:57:36.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:37 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:38 UTC)" (scheduled at 2026-06-28 09:57:37.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:38 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:39 UTC)" (scheduled at 2026-06-28 09:57:38.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:39 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:40 UTC)" (scheduled at 2026-06-28 09:57:39.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:40 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:41 UTC)" (scheduled at 2026-06-28 09:57:40.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:41 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:42 UTC)" (scheduled at 2026-06-28 09:57:41.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:42 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:43 UTC)" (scheduled at 2026-06-28 09:57:42.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:43 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:44 UTC)" (scheduled at 2026-06-28 09:57:43.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:44 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:45 UTC)" (scheduled at 2026-06-28 09:57:44.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:45 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:46 UTC)" (scheduled at 2026-06-28 09:57:45.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:46 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:47 UTC)" (scheduled at 2026-06-28 09:57:46.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:47 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:48 UTC)" (scheduled at 2026-06-28 09:57:47.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:48 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:49 UTC)" (scheduled at 2026-06-28 09:57:48.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:49 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:50 UTC)" (scheduled at 2026-06-28 09:57:49.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:50 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:51 UTC)" (scheduled at 2026-06-28 09:57:50.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:51 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:52 UTC)" (scheduled at 2026-06-28 09:57:51.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:52 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:53 UTC)" (scheduled at 2026-06-28 09:57:52.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:53 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:54 UTC)" (scheduled at 2026-06-28 09:57:53.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:54 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:55 UTC)" (scheduled at 2026-06-28 09:57:54.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:55 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:56 UTC)" (scheduled at 2026-06-28 09:57:55.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:56 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:57 UTC)" (scheduled at 2026-06-28 09:57:56.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:57 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:58 UTC)" (scheduled at 2026-06-28 09:57:57.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:58 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:59 UTC)" (scheduled at 2026-06-28 09:57:58.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:57:59 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:00 UTC)" (scheduled at 2026-06-28 09:57:59.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:00 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:01 UTC)" (scheduled at 2026-06-28 09:58:00.110728+00:00)
+INFO:apscheduler.executors.default:Running job "calculate_and_store_oee (trigger: interval[0:01:00], next run at: 2026-06-28 09:59:00 UTC)" (scheduled at 2026-06-28 09:58:00.382841+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:01 UTC)" executed successfully
+INFO:apscheduler.executors.default:Job "calculate_and_store_oee (trigger: interval[0:01:00], next run at: 2026-06-28 09:59:00 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:02 UTC)" (scheduled at 2026-06-28 09:58:01.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:02 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:03 UTC)" (scheduled at 2026-06-28 09:58:02.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:03 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:04 UTC)" (scheduled at 2026-06-28 09:58:03.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:04 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:05 UTC)" (scheduled at 2026-06-28 09:58:04.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:05 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:06 UTC)" (scheduled at 2026-06-28 09:58:05.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:06 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:07 UTC)" (scheduled at 2026-06-28 09:58:06.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:07 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:08 UTC)" (scheduled at 2026-06-28 09:58:07.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:08 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:09 UTC)" (scheduled at 2026-06-28 09:58:08.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:09 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:10 UTC)" (scheduled at 2026-06-28 09:58:09.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:10 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:11 UTC)" (scheduled at 2026-06-28 09:58:10.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:11 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:12 UTC)" (scheduled at 2026-06-28 09:58:11.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:12 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:13 UTC)" (scheduled at 2026-06-28 09:58:12.110728+00:00)
+INFO:apscheduler.executors.default:Job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:13 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "generate_and_insert_telemetry (trigger: interval[0:00:01], next run at: 2026-06-28 09:58:14 UTC)" (scheduled at 2026-06-28 09:58:13.110728+00:00)
