@@ -1,97 +1,157 @@
 import asyncio
 import random
-import math
 from datetime import datetime, timezone
-from sqlalchemy.ext.asyncio import AsyncSession
-from app.db.session import AsyncSessionLocal, engine
-from app.models.machine import Machine, Telemetry
-from app.simulation.streamer import broadcast_telemetry
+from typing import Dict, List, Optional, Any
+from sqlalchemy.future import select
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
-MACHINES_COUNT = 200
+from app.db.session import AsyncSessionLocal
+from app.models.machine import Machine
+from app.models.telemetry import Telemetry
+from app.simulation.physics_engine import MachinePhysicsState
+from app.simulation.streamer import broadcast_telemetry
+from app.core.config import settings
 
-async def init_machines():
-    async with AsyncSessionLocal() as session:
-        from sqlalchemy.future import select
-        result = await session.execute(select(Machine))
-        existing_machines = result.scalars().all()
-        
-        if len(existing_machines) < MACHINES_COUNT:
-            print("Initializing factory machines...")
-            for i in range(len(existing_machines), MACHINES_COUNT):
-                # Simple grid layout for 3D twin
-                row = i // 20
-                col = i % 20
-                
-                machine_type = random.choice(["Lathe", "Mill", "Grinder", "CMM"])
-                machine = Machine(
-                    name=f"MCH-{i:03d}",
-                    type=machine_type,
-                    status=random.choices(["Running", "Idle", "Fault", "Maintenance"], weights=[0.7, 0.15, 0.05, 0.1])[0],
-                    pos_x=float(col * 5),
-                    pos_y=0.0,
-                    pos_z=float(row * 5)
-                )
-                session.add(machine)
-            await session.commit()
-            print(f"Created {MACHINES_COUNT} machines.")
-        
-        return await session.execute(select(Machine))
-
-async def simulate_telemetry_tick(machine_id: int):
-    # Physics inspired generation
-    # Vibration grows with bearing wear, temp drifts with coolant
-    now = datetime.now(timezone.utc)
-    
-    t = Telemetry(
-        time=now,
-        machine_id=machine_id,
-        vibration_x=random.gauss(0.5, 0.1),
-        vibration_y=random.gauss(0.5, 0.1),
-        vibration_z=random.gauss(0.5, 0.1),
-        temperature_spindle=random.gauss(65.0, 2.0),
-        temperature_coolant=random.gauss(35.0, 1.0),
-        current_l1=random.gauss(15.0, 1.5),
-        current_l2=random.gauss(15.0, 1.5),
-        current_l3=random.gauss(15.0, 1.5),
-        pressure_coolant=random.gauss(50.0, 5.0),
-        pressure_air=random.gauss(90.0, 2.0),
-        rpm_spindle=random.gauss(3000.0, 100.0),
-        cutting_force=random.gauss(200.0, 20.0)
-    )
-    return t
-
-async def generate_and_insert_telemetry():
+def validate_telemetry_packet(t: Dict[str, Any]) -> bool:
+    """
+    Data Quality Validation Layer:
+    Rejects or cleans telemetry with missing values, physical impossibilities,
+    or invalid sensor spikes.
+    """
     try:
-        async with AsyncSessionLocal() as session:
-            from sqlalchemy.future import select
-            result = await session.execute(select(Machine))
-            machines = result.scalars().all()
-            
-            telemetry_batch = []
-            for m in machines:
-                if m.status == "Running":
-                    t = await simulate_telemetry_tick(m.id)
-                    telemetry_batch.append(t)
-            
-            if telemetry_batch:
-                session.add_all(telemetry_batch)
-                await session.commit()
-                await broadcast_telemetry(telemetry_batch)
-    except Exception as e:
-        print(f"Error in telemetry generation: {e}")
+        # Check impossible physics values
+        if t["vibration_x"] < 0 or t["vibration_x"] > 25.0: return False
+        if t["temperature_spindle"] < -10.0 or t["temperature_spindle"] > 200.0: return False
+        if t["current_l1"] < 0 or t["current_l1"] > 200.0: return False
+        if t["pressure_coolant"] < 0 or t["pressure_coolant"] > 250.0: return False
+        if t["rpm_spindle"] < 0 or t["rpm_spindle"] > 25000.0: return False
+        return True
+    except Exception:
+        return False
 
 class FactorySimulator:
     def __init__(self):
         self.scheduler = AsyncIOScheduler()
-        self.scheduler.add_job(generate_and_insert_telemetry, 'interval', seconds=1)
+        self.physics_states: Dict[int, MachinePhysicsState] = {}
+        self.is_running = False
+
+    async def initialize(self):
+        """Load machines from database and initialize their physics simulators."""
+        async with AsyncSessionLocal() as session:
+            result = await session.execute(select(Machine))
+            machines = result.scalars().all()
+            
+            for m in machines:
+                state = MachinePhysicsState(
+                    machine_id=m.id,
+                    name=m.name,
+                    machine_type=m.type,
+                    zone=m.zone,
+                    criticality=m.criticality,
+                    ideal_cycle_time_sec=m.ideal_cycle_time_sec or 45.0
+                )
+                state.status = m.status
+                state.degradation_state = m.degradation_state
+                state.failure_mode = m.active_failure_mode
+                state.health_score = m.health_score
+                state.operating_hours = m.operating_hours
+                
+                # Align wear factor with initial state
+                if m.degradation_state == "HEALTHY":
+                    state.wear_factor = 0.05
+                elif m.degradation_state == "ANOMALOUS":
+                    state.wear_factor = 0.80
+                elif m.degradation_state == "CRITICAL":
+                    state.wear_factor = 0.92
+                    
+                self.physics_states[m.id] = state
+
+            print(f"[Factory Simulator] Initialized physics states for {len(self.physics_states)} machines.")
+
+    def inject_failure(self, machine_id: int, failure_mode: str, severity: float = 0.65) -> bool:
+        """Inject specific failure mode into simulated machine."""
+        if machine_id in self.physics_states:
+            state = self.physics_states[machine_id]
+            state.inject_failure(failure_mode, severity)
+            print(f"[Factory Simulator] Injected {failure_mode} on {state.name} (ID: {machine_id})")
+            return True
+        return False
+
+    def recover_machine(self, machine_id: int) -> bool:
+        """Perform simulated maintenance recovery on machine."""
+        if machine_id in self.physics_states:
+            state = self.physics_states[machine_id]
+            state.execute_maintenance()
+            print(f"[Factory Simulator] Recovered machine {state.name} (ID: {machine_id})")
+            return True
+        return False
+
+    async def simulation_tick(self):
+        """Simulate one second across all factory machines, validate, store and broadcast."""
+        try:
+            telemetry_batch: List[Dict[str, Any]] = []
+            db_records: List[Telemetry] = []
+            
+            for m_id, state in self.physics_states.items():
+                tick_data = state.tick()
+                
+                if validate_telemetry_packet(tick_data):
+                    telemetry_batch.append(tick_data)
+                    
+                    # Create DB model record
+                    t_record = Telemetry(
+                        time=tick_data["time"],
+                        machine_id=m_id,
+                        vibration_x=tick_data["vibration_x"],
+                        vibration_y=tick_data["vibration_y"],
+                        vibration_z=tick_data["vibration_z"],
+                        temperature_spindle=tick_data["temperature_spindle"],
+                        temperature_coolant=tick_data["temperature_coolant"],
+                        current_l1=tick_data["current_l1"],
+                        current_l2=tick_data["current_l2"],
+                        current_l3=tick_data["current_l3"],
+                        pressure_coolant=tick_data["pressure_coolant"],
+                        pressure_air=tick_data["pressure_air"],
+                        rpm_spindle=tick_data["rpm_spindle"],
+                        cutting_force=tick_data["cutting_force"]
+                    )
+                    db_records.append(t_record)
+
+            # Persist and broadcast
+            if db_records:
+                async with AsyncSessionLocal() as session:
+                    session.add_all(db_records)
+                    
+                    # Sync machine status changes back to DB
+                    for m_id, state in self.physics_states.items():
+                        res = await session.execute(select(Machine).filter(Machine.id == m_id))
+                        db_m = res.scalars().first()
+                        if db_m:
+                            db_m.status = state.status
+                            db_m.degradation_state = state.degradation_state
+                            db_m.active_failure_mode = state.failure_mode
+                            db_m.health_score = state.health_score
+                            db_m.operating_hours = state.operating_hours
+
+                    await session.commit()
+
+            if telemetry_batch:
+                await broadcast_telemetry(telemetry_batch)
+
+        except Exception as e:
+            print(f"[Factory Simulator] Error in simulation tick: {e}")
 
     def start(self):
-        self.scheduler.start()
-        print("Factory Simulator started.")
-        
+        if not self.is_running:
+            self.scheduler.add_job(self.simulation_tick, 'interval', seconds=settings.SIMULATION_INTERVAL_SECONDS)
+            self.scheduler.start()
+            self.is_running = True
+            print("[Factory Simulator] Scheduler running.")
+
     def stop(self):
-        self.scheduler.shutdown()
-        print("Factory Simulator stopped.")
+        if self.is_running:
+            self.scheduler.shutdown()
+            self.is_running = False
+            print("[Factory Simulator] Scheduler stopped.")
 
 simulator = FactorySimulator()
