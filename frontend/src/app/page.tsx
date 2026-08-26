@@ -1,153 +1,191 @@
 'use client'
+
 import { useEffect, useRef } from 'react'
-import { FactoryFloor } from '@/components/dashboard/FactoryFloor'
-import { TelemetryPanel } from '@/components/dashboard/TelemetryPanel'
-import { WorkOrdersPanel } from '@/components/dashboard/WorkOrdersPanel'
 import { useRouter } from 'next/navigation'
 import { useFactoryStore } from '@/lib/store'
-import { Activity, Settings, AlertTriangle, ShieldCheck, LogOut } from 'lucide-react'
+import { CommandCenterTopBar } from '@/components/dashboard/CommandCenterTopBar'
+import { FactoryFloor } from '@/components/dashboard/FactoryFloor'
+import { TelemetryPanel } from '@/components/dashboard/TelemetryPanel'
+import { MachineDetailView } from '@/components/dashboard/MachineDetailView'
+import { AlertsCenter } from '@/components/dashboard/AlertsCenter'
+import { WorkOrdersPanel } from '@/components/dashboard/WorkOrdersPanel'
+import { OEEAnalyticsView } from '@/components/dashboard/OEEAnalyticsView'
+import { MLAnalyticsView } from '@/components/dashboard/MLAnalyticsView'
+import { DemoControlPanel } from '@/components/dashboard/DemoControlPanel'
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
+import { Wrench, ArrowRight } from 'lucide-react'
 
 export default function Home() {
-    const router = useRouter()
-    const setMachines = useFactoryStore(state => state.setMachines)
-    const addTelemetryBatch = useFactoryStore(state => state.addTelemetryBatch)
-    const machines = useFactoryStore(state => state.machines)
-    const wsRef = useRef<WebSocket | null>(null)
+  const router = useRouter()
+  const setMachines = useFactoryStore((state) => state.setMachines)
+  const addTelemetryBatch = useFactoryStore((state) => state.addTelemetryBatch)
+  const setAlerts = useFactoryStore((state) => state.setAlerts)
+  const setWorkOrders = useFactoryStore((state) => state.setWorkOrders)
+  const setPlantOEE = useFactoryStore((state) => state.setPlantOEE)
+  const setCurrentUser = useFactoryStore((state) => state.setCurrentUser)
+  const activeTab = useFactoryStore((state) => state.activeTab)
+  const setActiveTab = useFactoryStore((state) => state.setActiveTab)
+  const workOrders = useFactoryStore((state) => state.workOrders)
+  const machines = useFactoryStore((state) => state.machines)
 
-    useEffect(() => {
-        const token = localStorage.getItem('token')
-        if (!token) {
-            router.push('/login')
-            return
-        }
+  const wsRef = useRef<WebSocket | null>(null)
 
-        // Fetch initial machines
-        fetch('http://localhost:8000/api/v1/machines/', {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        })
-            .then(res => {
-                if (res.status === 401) {
-                    localStorage.removeItem('token')
-                    router.push('/login')
-                    throw new Error('Unauthorized')
-                }
-                return res.json()
-            })
-            .then(data => setMachines(data))
-            .catch(err => console.error("Failed to fetch machines", err))
-
-        // Connect WebSocket for telemetry
-        const ws = new WebSocket('ws://localhost:8000/ws/telemetry')
-        ws.onmessage = (event) => {
-            const message = JSON.parse(event.data)
-            if (message.type === 'telemetry_batch') {
-                addTelemetryBatch(message.data)
-                
-                // Optionally update machine status randomly or based on real data
-                // In a full implementation, the backend would broadcast machine status changes.
-            }
-        }
-        wsRef.current = ws
-
-        return () => {
-            ws.close()
-        }
-    }, [setMachines, addTelemetryBatch])
-
-    const stats = {
-        total: machines.length,
-        running: machines.filter(m => m.status === 'Running').length,
-        fault: machines.filter(m => m.status === 'Fault').length,
-        maintenance: machines.filter(m => m.status === 'Maintenance').length,
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    const userJson = localStorage.getItem('user')
+    if (userJson) {
+      try { setCurrentUser(JSON.parse(userJson)) } catch (e) {}
     }
 
-    return (
-        <main className="min-h-screen bg-slate-950 text-slate-200 flex flex-col p-4 font-sans">
-            <header className="flex justify-between items-center mb-4">
-                <div>
-                    <h1 className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
-                        <Activity className="text-blue-500" /> FactoryIQ
-                    </h1>
-                    <p className="text-sm text-slate-400">Industrial AI Predictive Maintenance & OEE Command Center</p>
-                </div>
-                
-                <div className="flex gap-4">
-                    <div className="flex items-center gap-2 bg-slate-900 px-4 py-2 rounded-lg border border-slate-800">
-                        <ShieldCheck className="text-emerald-500 w-5 h-5" />
-                        <div>
-                            <div className="text-xs text-slate-400">Running</div>
-                            <div className="font-bold">{stats.running}</div>
-                        </div>
-                    </div>
-                    <div className="flex items-center gap-2 bg-slate-900 px-4 py-2 rounded-lg border border-slate-800">
-                        <AlertTriangle className="text-red-500 w-5 h-5" />
-                        <div>
-                            <div className="text-xs text-slate-400">Faults</div>
-                            <div className="font-bold">{stats.fault}</div>
-                        </div>
-                    </div>
-                    <div className="flex items-center gap-2 bg-slate-900 px-4 py-2 rounded-lg border border-slate-800">
-                        <Settings className="text-blue-500 w-5 h-5" />
-                        <div>
-                            <div className="text-xs text-slate-400">Maintenance</div>
-                            <div className="font-bold">{stats.maintenance}</div>
-                        </div>
-                    </div>
-                    <button 
-                        onClick={() => {
-                            localStorage.removeItem('token')
-                            router.push('/login')
-                        }}
-                        className="flex items-center gap-2 bg-slate-900 px-4 py-2 rounded-lg border border-slate-800 hover:bg-slate-800 transition-colors"
-                    >
-                        <LogOut className="text-slate-400 w-5 h-5" />
-                    </button>
-                </div>
-            </header>
+    // 1. Fetch initial machine list
+    fetch('http://localhost:8000/api/v1/machines/', {
+      headers: token ? { Authorization: `Bearer ${token}` } : {}
+    })
+      .then((res) => {
+        if (res.status === 401) {
+          localStorage.removeItem('token')
+          router.push('/login')
+          throw new Error('Unauthorized')
+        }
+        return res.json()
+      })
+      .then((data) => setMachines(data))
+      .catch((err) => console.error('Failed to fetch machines', err))
 
-            <div className="flex-1 grid grid-cols-1 lg:grid-cols-4 gap-4 overflow-hidden h-[calc(100vh-100px)]">
-                {/* 3D Digital Twin - Takes up 3 columns */}
-                <div className="lg:col-span-3 h-full relative flex flex-col">
-                    <div className="flex-1 min-h-0">
-                        <FactoryFloor />
-                    </div>
-                    
-                    {/* Simplified layout for other dashboards, keeping focus on the 3D twin and telemetry */}
-                    <div className="h-48 mt-4 grid grid-cols-3 gap-4">
-                        <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 flex flex-col justify-center items-center">
-                            <h3 className="text-sm font-semibold text-slate-400 mb-2">OEE Availability</h3>
-                            <div className="text-3xl font-bold text-emerald-400">92.4%</div>
-                        </div>
-                        <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 flex flex-col justify-center items-center">
-                            <h3 className="text-sm font-semibold text-slate-400 mb-2">OEE Performance</h3>
-                            <div className="text-3xl font-bold text-blue-400">88.1%</div>
-                        </div>
-                        <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 flex flex-col justify-center items-center">
-                            <h3 className="text-sm font-semibold text-slate-400 mb-2">OEE Quality</h3>
-                            <div className="text-3xl font-bold text-indigo-400">99.2%</div>
-                        </div>
-                    </div>
-                    
-                    {/* Floating Overlay Stats */}
-                    <div className="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md p-3 rounded-lg border border-slate-700 pointer-events-none">
-                        <h3 className="text-sm font-semibold text-slate-300 mb-1">Global OEE</h3>
-                        <div className="text-2xl font-bold text-white">68.4%</div>
-                        <div className="text-xs text-emerald-400">↑ 1.2% from last shift</div>
-                    </div>
-                </div>
+    // 2. Fetch active alerts
+    fetch('http://localhost:8000/api/v1/alerts/')
+      .then((res) => res.json())
+      .then((data) => setAlerts(data))
+      .catch((err) => console.error('Failed to fetch alerts', err))
 
-                {/* Right Sidebar - Analytics/Telemetry */}
-                <div className="h-full flex flex-col gap-4">
-                    <div className="flex-1 min-h-0">
-                        <TelemetryPanel />
-                    </div>
-                    <div className="flex-1 min-h-0">
-                        <WorkOrdersPanel />
-                    </div>
-                </div>
+    // 3. Fetch active work orders
+    fetch('http://localhost:8000/api/v1/work-orders/')
+      .then((res) => res.json())
+      .then((data) => setWorkOrders(data))
+      .catch((err) => console.error('Failed to fetch work orders', err))
+
+    // 4. Fetch initial OEE
+    fetch('http://localhost:8000/api/v1/oee/plant')
+      .then((res) => res.json())
+      .then((data) => setPlantOEE(data))
+      .catch((err) => console.error('Failed to fetch plant OEE', err))
+
+    // 5. Connect WebSocket with auto-reconnect
+    const connectWS = () => {
+      const wsUrl = token
+        ? `ws://localhost:8000/ws/telemetry?token=${token}`
+        : 'ws://localhost:8000/ws/telemetry'
+      const ws = new WebSocket(wsUrl)
+
+      ws.onmessage = (event) => {
+        try {
+          const message = JSON.parse(event.data)
+          if (message.type === 'telemetry_batch') {
+            addTelemetryBatch(message.data)
+          }
+        } catch (e) {
+          console.error('WS parse error', e)
+        }
+      }
+
+      ws.onclose = () => {
+        setTimeout(connectWS, 3000)
+      }
+
+      wsRef.current = ws
+    }
+
+    connectWS()
+
+    // Periodic polling for OEE, Alerts & Work Orders
+    const pollInterval = setInterval(() => {
+      fetch('http://localhost:8000/api/v1/alerts/')
+        .then((res) => res.json())
+        .then((data) => setAlerts(data))
+        .catch(() => {})
+
+      fetch('http://localhost:8000/api/v1/work-orders/')
+        .then((res) => res.json())
+        .then((data) => setWorkOrders(data))
+        .catch(() => {})
+
+      fetch('http://localhost:8000/api/v1/oee/plant')
+        .then((res) => res.json())
+        .then((data) => setPlantOEE(data))
+        .catch(() => {})
+    }, 5000)
+
+    return () => {
+      if (wsRef.current) wsRef.current.close()
+      clearInterval(pollInterval)
+    }
+  }, [router, setMachines, addTelemetryBatch, setAlerts, setWorkOrders, setPlantOEE, setCurrentUser])
+
+  return (
+    <main className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-blue-600 selection:text-white">
+      {/* Universal Command Center Header */}
+      <CommandCenterTopBar />
+
+      {/* Main Content Viewport */}
+      <div className="flex-1 p-4 overflow-y-auto">
+        {activeTab === 'COMMAND_CENTER' && (
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 h-[calc(100vh-130px)]">
+            {/* 3D Digital Twin — 3 Columns */}
+            <div className="lg:col-span-3 h-full relative">
+              <FactoryFloor />
             </div>
-        </main>
-    )
+
+            {/* Right Sidebar — Real-Time Telemetry & Active Tickets */}
+            <div className="h-full flex flex-col gap-4">
+              <div className="flex-1 min-h-0">
+                <TelemetryPanel />
+              </div>
+              
+              {/* Quick Work Orders Sidebar Card */}
+              <Card className="h-44 bg-slate-900 border-slate-800 text-slate-100 flex flex-col justify-between">
+                <CardHeader className="py-2 px-3 border-b border-slate-800 flex flex-row items-center justify-between">
+                  <CardTitle className="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
+                    <Wrench className="w-3.5 h-3.5 text-amber-400" /> Active Maintenance Tasks
+                  </CardTitle>
+                  <button
+                    onClick={() => setActiveTab('WORK_ORDERS')}
+                    className="text-[10px] text-cyan-400 hover:text-cyan-300 flex items-center gap-1"
+                  >
+                    View All <ArrowRight className="w-3 h-3" />
+                  </button>
+                </CardHeader>
+                <CardContent className="p-2 overflow-y-auto space-y-1.5 flex-1">
+                  {workOrders.filter((w) => w.status !== 'COMPLETED').slice(0, 3).map((wo) => {
+                    const m = machines.find((mach) => mach.id === wo.machine_id)
+                    return (
+                      <div key={wo.id} className="bg-slate-950 p-2 rounded-lg border border-slate-800/80 text-[11px] flex justify-between items-center">
+                        <div className="truncate max-w-[170px]">
+                          <span className="font-bold text-white font-mono">{m?.name || `MCH-${wo.machine_id}`}</span>: {wo.title}
+                        </div>
+                        <span className={`px-1.5 py-0.5 rounded text-[9px] font-bold ${
+                          wo.priority === 'CRITICAL' ? 'bg-red-950 text-red-400' : 'bg-amber-950 text-amber-400'
+                        }`}>
+                          {wo.priority}
+                        </span>
+                      </div>
+                    )
+                  })}
+                  {workOrders.filter((w) => w.status !== 'COMPLETED').length === 0 && (
+                    <div className="text-center text-slate-500 text-[11px] py-4">No active maintenance tickets.</div>
+                  )}
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'MACHINE_DETAIL' && <MachineDetailView />}
+        {activeTab === 'ALERTS' && <AlertsCenter />}
+        {activeTab === 'WORK_ORDERS' && <WorkOrdersPanel />}
+        {activeTab === 'OEE' && <OEEAnalyticsView />}
+        {activeTab === 'ML_MODELS' && <MLAnalyticsView />}
+        {activeTab === 'DEMO_CONTROLS' && <DemoControlPanel />}
+      </div>
+    </main>
+  )
 }
