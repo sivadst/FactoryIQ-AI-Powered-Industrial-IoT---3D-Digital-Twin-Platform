@@ -3,19 +3,57 @@ version: '3.8'
 services:
   db:
     image: timescale/timescaledb-ha:pg16
+    container_name: factoryiq-db
     environment:
-      POSTGRES_USER: factory_admin
-      POSTGRES_PASSWORD: factory_password
-      POSTGRES_DB: factoryiq
+      POSTGRES_USER: ${POSTGRES_USER:-factory_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-factory_password}
+      POSTGRES_DB: ${POSTGRES_DB:-factoryiq}
     ports:
       - "5432:5432"
     volumes:
       - timescale_data:/home/postgres/pgdata/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U factory_admin -d factoryiq"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-factory_admin} -d ${POSTGRES_DB:-factoryiq}"]
       interval: 5s
       timeout: 5s
       retries: 5
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: factoryiq-backend
+    environment:
+      USE_SQLITE: "False"
+      POSTGRES_USER: ${POSTGRES_USER:-factory_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-factory_password}
+      POSTGRES_SERVER: db
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: ${POSTGRES_DB:-factoryiq}
+      SECRET_KEY: ${SECRET_KEY:-factoryiq-industrial-enterprise-secret-key-change-in-production-2026}
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: factoryiq-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    restart: unless-stopped
 
 volumes:
   timescale_data:
