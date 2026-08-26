@@ -1,0 +1,156 @@
+{
+  "timestamp": "2026-08-26T11:40:31.554660+00:00",
+  "dataset_size": 1800,
+  "train_samples": 1260,
+  "test_samples": 270,
+  "classes": [
+    "NORMAL",
+    "BEARING_FAILURE",
+    "MOTOR_OVERHEATING",
+    "TOOL_WEAR",
+    "LUBRICATION_FAILURE",
+    "SPINDLE_WEAR",
+    "ELECTRICAL_FAULT",
+    "COOLANT_FAILURE",
+    "VIBRATION_ANOMALY"
+  ],
+  "feature_count": 20,
+  "classification": {
+    "accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "confusion_matrix": [
+      [
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        30,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        30,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        30,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        30,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        30
+      ]
+    ]
+  },
+  "regression_rul": {
+    "mae_hours": 6.09,
+    "rmse_hours": 14.93,
+    "r2_score": 0.9611
+  },
+  "anomaly_detection": {
+    "accuracy": 0.9481,
+    "threshold": 0.55
+  },
+  "feature_importances": {
+    "vib_x_mean": 0.07005344502123874,
+    "vib_y_mean": 0.09271839856254316,
+    "vib_z_mean": 0.06204482768849443,
+    "vib_rms": 0.05516371163006147,
+    "vib_kurtosis": 0.011019837564411689,
+    "vib_crest_factor": 0.08636651541181617,
+    "temp_spindle_mean": 0.085072864264621,
+    "temp_spindle_slope": 0.0009518917091345115,
+    "temp_coolant_mean": 0.1371720206275946,
+    "temp_delta": 0.07941101143973592,
+    "current_mean": 0.0822304981148931,
+    "current_imbalance": 0.06024395856837574,
+    "current_slope": 0.0007393436354557269,
+    "pressure_coolant_mean": 0.055663698592602506,
+    "pressure_air_mean": 0.001145069358400478,
+    "rpm_mean": 0.011847783690534137,
+    "rpm_std": 0.0314375693899227,
+    "force_mean": 0.07471214714407819,
+    "force_std": 0.000988018872485075,
+    "operating_hours": 0.0010173887136007333
+  }
+}
