@@ -1,7 +1,8 @@
 import os
 import json
-from fastapi import APIRouter, HTTPException, BackgroundTasks
+from fastapi import APIRouter, HTTPException, BackgroundTasks, Depends
 from app.ml.models import train_and_cache_models, MODELS_DIR
+from app.core import security
 
 router = APIRouter()
 
@@ -28,7 +29,11 @@ def get_ml_evaluation_metrics():
         raise HTTPException(status_code=500, detail=f"Failed to read evaluation metrics: {e}")
 
 @router.post("/retrain")
-def retrain_models(background_tasks: BackgroundTasks):
+def retrain_models(
+    background_tasks: BackgroundTasks,
+    user_payload: security.TokenPayload = Depends(security.require_roles(security.UserRole.ENGINEERING_ROLES))
+):
     """Trigger background model retraining on current physics dataset."""
     background_tasks.add_task(train_and_cache_models)
-    return {"status": "SUCCESS", "message": "ML retraining pipeline launched in background."}
+    return {"status": "SUCCESS", "message": f"ML retraining pipeline launched by {user_payload.sub}."}
+

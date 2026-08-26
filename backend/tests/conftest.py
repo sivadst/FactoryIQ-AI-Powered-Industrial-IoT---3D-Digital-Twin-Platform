@@ -1,8 +1,10 @@
 import pytest
 import pytest_asyncio
+from httpx import AsyncClient, ASGITransport
 from app.db.init_db import init_db
 from app.simulation.factory_simulator import simulator
 from app.ml.models import train_and_cache_models
+from app.main import app
 
 @pytest_asyncio.fixture(scope="session", autouse=True)
 async def setup_test_suite():
@@ -10,3 +12,9 @@ async def setup_test_suite():
     train_and_cache_models()
     await simulator.initialize()
     yield
+
+@pytest_asyncio.fixture
+async def client():
+    async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as c:
+        yield c
+

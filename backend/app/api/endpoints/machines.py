@@ -150,7 +150,8 @@ async def get_machine_telemetry_history(
 async def inject_failure_to_machine(
     machine_id: int,
     req: FailureInjectionRequest,
-    db: AsyncSession = Depends(get_db)
+    db: AsyncSession = Depends(get_db),
+    user_payload: security.TokenPayload = Depends(security.require_roles(security.UserRole.ENGINEERING_ROLES))
 ):
     valid_modes = [
         "BEARING_FAILURE", "MOTOR_OVERHEATING", "TOOL_WEAR", "LUBRICATION_FAILURE",
@@ -176,7 +177,8 @@ async def inject_failure_to_machine(
 @router.post("/{machine_id}/recover")
 async def recover_machine_action(
     machine_id: int,
-    db: AsyncSession = Depends(get_db)
+    db: AsyncSession = Depends(get_db),
+    user_payload: security.TokenPayload = Depends(security.require_roles(security.UserRole.MAINTENANCE_ROLES))
 ):
     simulator.recover_machine(machine_id)
     res = await db.execute(select(Machine).filter(Machine.id == machine_id))
@@ -189,3 +191,4 @@ async def recover_machine_action(
         await db.commit()
 
     return {"status": "SUCCESS", "message": f"Machine {machine_id} recovered to healthy baseline"}
+

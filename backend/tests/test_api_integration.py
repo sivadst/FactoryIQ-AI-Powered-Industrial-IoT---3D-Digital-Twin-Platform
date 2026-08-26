@@ -2,6 +2,7 @@ import pytest
 from httpx import AsyncClient, ASGITransport
 from app.main import app
 from app.core.config import settings
+from app.core import security
 
 @pytest.mark.asyncio
 async def test_health_and_ready():
@@ -71,6 +72,9 @@ async def test_oee_api():
 @pytest.mark.asyncio
 async def test_closed_loop_workflow():
     async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as client:
+        admin_token = security.create_access_token(subject="admin", role=security.UserRole.ADMIN)
+        headers = {"Authorization": f"Bearer {admin_token}"}
+
         # 1. Fetch Machine 1
         res = await client.get(f"{settings.API_V1_STR}/machines/1")
         assert res.status_code == 200
@@ -78,7 +82,8 @@ async def test_closed_loop_workflow():
         # 2. Inject Failure
         inject_res = await client.post(
             f"{settings.API_V1_STR}/machines/1/inject-failure",
-            json={"failure_mode": "BEARING_FAILURE", "severity": 0.88}
+            json={"failure_mode": "BEARING_FAILURE", "severity": 0.88},
+            headers=headers
         )
         assert inject_res.status_code == 200
 
@@ -91,7 +96,8 @@ async def test_closed_loop_workflow():
                 "type": "PREDICTIVE",
                 "priority": "CRITICAL",
                 "recommended_action": "Replace bearing cartridge"
-            }
+            },
+            headers=headers
         )
         assert wo_res.status_code == 200
         wo_id = wo_res.json()["id"]
@@ -99,7 +105,8 @@ async def test_closed_loop_workflow():
         # 4. Assign Technician
         assign_res = await client.put(
             f"{settings.API_V1_STR}/work-orders/{wo_id}/assign",
-            json={"assigned_to": "Sarah Connor, Lead Reliability Specialist"}
+            json={"assigned_to": "Sarah Connor, Lead Reliability Specialist"},
+            headers=headers
         )
         assert assign_res.status_code == 200
 
@@ -110,7 +117,8 @@ async def test_closed_loop_workflow():
                 "technician": "Sarah Connor",
                 "completion_notes": "Replaced spindle bearings, aligned axis, balanced at 3500 RPM. Verified vibration back to 0.35 mm/s.",
                 "parts_used": "Spindle Bearing Cartridge Kit"
-            }
+            },
+            headers=headers
         )
         assert comp_res.status_code == 200
         assert "recovered" in comp_res.json()["message"].lower()

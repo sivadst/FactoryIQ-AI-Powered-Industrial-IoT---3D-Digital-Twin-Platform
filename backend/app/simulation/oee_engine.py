@@ -5,6 +5,51 @@ from app.db.session import AsyncSessionLocal
 from app.models.oee import OEERecord
 from app.models.machine import Machine
 
+def compute_oee_metrics(
+    planned_mins: float,
+    operating_mins: float,
+    ideal_cycle_sec: float,
+    total_parts: int,
+    rejected_parts: int
+) -> dict:
+    """
+    Pure mathematical calculation of standards-compliant OEE components:
+    Availability = Operating Time / Planned Time
+    Performance = (Ideal Cycle Time * Total Parts) / Operating Time
+    Quality = Good Parts / Total Parts
+    OEE = Availability * Performance * Quality
+    """
+    if planned_mins <= 0.0:
+        return {
+            "availability": 0.0,
+            "performance": 0.0,
+            "quality": 0.0,
+            "oee": 0.0,
+            "good_parts": 0
+        }
+
+    availability = min(1.0, max(0.0, operating_mins / planned_mins))
+    
+    operating_seconds = operating_mins * 60.0
+    if operating_seconds > 0.0 and total_parts > 0:
+        performance = (ideal_cycle_sec * total_parts) / operating_seconds
+        performance = min(1.5, max(0.0, performance))
+    else:
+        performance = 0.0
+
+    good_parts = max(0, total_parts - rejected_parts)
+    quality = (good_parts / total_parts) if total_parts > 0 else (1.0 if operating_mins == 0 else 0.0)
+    quality = min(1.0, max(0.0, quality))
+
+    oee = availability * min(1.0, performance) * quality
+    return {
+        "availability": round(availability, 4),
+        "performance": round(performance, 4),
+        "quality": round(quality, 4),
+        "oee": round(oee, 4),
+        "good_parts": good_parts
+    }
+
 async def calculate_and_store_oee():
     """
     Calculate and persist standards-compliant OEE records for all machines based on

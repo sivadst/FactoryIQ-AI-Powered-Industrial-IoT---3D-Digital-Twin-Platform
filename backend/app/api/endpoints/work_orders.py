@@ -11,6 +11,7 @@ from app.models.work_order import WorkOrder
 from app.models.machine import Machine
 from app.simulation.work_order_engine import complete_work_order_action
 from app.simulation.factory_simulator import simulator
+from app.core import security
 
 router = APIRouter()
 
@@ -87,7 +88,8 @@ async def list_work_orders(
 @router.post("/", response_model=WorkOrderResponse)
 async def create_work_order(
     req: CreateWorkOrderRequest,
-    db: AsyncSession = Depends(get_db)
+    db: AsyncSession = Depends(get_db),
+    user_payload: security.TokenPayload = Depends(security.require_roles(security.UserRole.WRITE_ROLES))
 ):
     now = datetime.now(timezone.utc)
     wo = WorkOrder(
@@ -113,7 +115,8 @@ async def create_work_order(
 async def assign_technician(
     work_order_id: int,
     req: AssignTechnicianRequest,
-    db: AsyncSession = Depends(get_db)
+    db: AsyncSession = Depends(get_db),
+    user_payload: security.TokenPayload = Depends(security.require_roles(security.UserRole.MAINTENANCE_ROLES))
 ):
     res = await db.execute(select(WorkOrder).filter(WorkOrder.id == work_order_id))
     wo = res.scalars().first()
@@ -129,7 +132,8 @@ async def assign_technician(
 async def complete_work_order(
     work_order_id: int,
     req: CompleteWorkOrderRequest,
-    db: AsyncSession = Depends(get_db)
+    db: AsyncSession = Depends(get_db),
+    user_payload: security.TokenPayload = Depends(security.require_roles(security.UserRole.MAINTENANCE_ROLES))
 ):
     success = await complete_work_order_action(
         work_order_id=work_order_id,
@@ -149,3 +153,4 @@ async def complete_work_order(
         "status": "SUCCESS",
         "message": f"Work order {work_order_id} completed successfully. Machine recovered and active alerts cleared."
     }
+

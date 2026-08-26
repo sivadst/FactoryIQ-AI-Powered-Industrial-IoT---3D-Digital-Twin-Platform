@@ -7,7 +7,10 @@ from fastapi.security import OAuth2PasswordBearer
 from pydantic import BaseModel
 from .config import settings
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl=f"{settings.API_V1_STR}/auth/login/access-token")
+oauth2_scheme = OAuth2PasswordBearer(
+    tokenUrl=f"{settings.API_V1_STR}/auth/login/access-token",
+    auto_error=False
+)
 
 class TokenPayload(BaseModel):
     sub: Optional[str] = None
@@ -25,6 +28,7 @@ class UserRole:
     ALL_ROLES = [ADMIN, PLANT_MANAGER, MAINTENANCE_MANAGER, ENGINEER, OPERATOR, VIEWER]
     WRITE_ROLES = [ADMIN, PLANT_MANAGER, MAINTENANCE_MANAGER, ENGINEER, OPERATOR]
     MAINTENANCE_ROLES = [ADMIN, PLANT_MANAGER, MAINTENANCE_MANAGER, ENGINEER]
+    ENGINEERING_ROLES = [ADMIN, ENGINEER]
     ADMIN_ROLES = [ADMIN, PLANT_MANAGER]
 
 def create_access_token(
@@ -63,16 +67,23 @@ def get_password_hash(password: str) -> str:
     salt = bcrypt.gensalt()
     return bcrypt.hashpw(password.encode("utf-8")[:72], salt).decode("utf-8")
 
-async def get_current_user_payload(token: str = Depends(oauth2_scheme)) -> TokenPayload:
+async def get_current_user_payload(token: Optional[str] = Depends(oauth2_scheme)) -> TokenPayload:
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Could not validate credentials",
         headers={"WWW-Authenticate": "Bearer"},
     )
+    if not token:
+        raise credentials_exception
     payload = verify_token(token)
     if payload is None or payload.sub is None:
         raise credentials_exception
     return payload
+
+async def get_optional_user_payload(token: Optional[str] = Depends(oauth2_scheme)) -> Optional[TokenPayload]:
+    if not token:
+        return None
+    return verify_token(token)
 
 def require_roles(allowed_roles: List[str]):
     async def role_checker(token_payload: TokenPayload = Depends(get_current_user_payload)):
@@ -83,3 +94,4 @@ def require_roles(allowed_roles: List[str]):
             )
         return token_payload
     return role_checker
+

@@ -9,6 +9,7 @@ from datetime import datetime, timezone
 from app.db.session import AsyncSessionLocal
 from app.models.alert import Alert
 from app.models.machine import Machine
+from app.core import security
 
 router = APIRouter()
 
@@ -65,7 +66,8 @@ async def list_alerts(
 async def acknowledge_alert(
     alert_id: int,
     req: AcknowledgeRequest,
-    db: AsyncSession = Depends(get_db)
+    db: AsyncSession = Depends(get_db),
+    user_payload: security.TokenPayload = Depends(security.require_roles(security.UserRole.WRITE_ROLES))
 ):
     res = await db.execute(select(Alert).filter(Alert.id == alert_id))
     alert = res.scalars().first()
@@ -73,14 +75,15 @@ async def acknowledge_alert(
         raise HTTPException(status_code=404, detail="Alert not found")
 
     alert.status = "ACKNOWLEDGED"
-    alert.acknowledged_by = req.acknowledged_by
+    alert.acknowledged_by = req.acknowledged_by or user_payload.sub
     await db.commit()
-    return {"status": "SUCCESS", "message": f"Alert {alert_id} acknowledged by {req.acknowledged_by}"}
+    return {"status": "SUCCESS", "message": f"Alert {alert_id} acknowledged by {alert.acknowledged_by}"}
 
 @router.post("/{alert_id}/resolve")
 async def resolve_alert(
     alert_id: int,
-    db: AsyncSession = Depends(get_db)
+    db: AsyncSession = Depends(get_db),
+    user_payload: security.TokenPayload = Depends(security.require_roles(security.UserRole.WRITE_ROLES))
 ):
     res = await db.execute(select(Alert).filter(Alert.id == alert_id))
     alert = res.scalars().first()
@@ -91,3 +94,4 @@ async def resolve_alert(
     alert.resolved_at = datetime.now(timezone.utc)
     await db.commit()
     return {"status": "SUCCESS", "message": f"Alert {alert_id} marked as resolved"}
+
