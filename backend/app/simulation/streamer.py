@@ -1,45 +1,39 @@
 import asyncio
-import json
+from typing import List, Dict, Any
 from app.api.websockets.stream import manager
 from app.ml.inference import predict_machine_health
 
-# Dictionary to keep short window of telemetry per machine for inference
-telemetry_windows = {}
+# Telemetry rolling window buffer per machine (10 time-steps)
+telemetry_windows: Dict[int, List[Dict[str, Any]]] = {}
 
-async def broadcast_telemetry(telemetry_batch):
+async def broadcast_telemetry(telemetry_batch: List[Dict[str, Any]]):
+    """
+    Attach real-time ML inference (Anomaly, Classification, RUL, XAI, RCA)
+    and broadcast rich telemetry payload to WebSocket subscribers.
+    """
     message = {
         "type": "telemetry_batch",
+        "timestamp": telemetry_batch[0]["time"].isoformat() if telemetry_batch else None,
         "data": []
     }
+    
     for t in telemetry_batch:
-        t_dict = {
-            "machine_id": t.machine_id,
-            "vibration_x": t.vibration_x,
-            "vibration_y": t.vibration_y,
-            "vibration_z": t.vibration_z,
-            "temperature_spindle": t.temperature_spindle,
-            "temperature_coolant": t.temperature_coolant,
-            "current_l1": t.current_l1,
-            "current_l2": t.current_l2,
-            "current_l3": t.current_l3,
-            "pressure_coolant": t.pressure_coolant,
-            "pressure_air": t.pressure_air,
-            "rpm_spindle": t.rpm_spindle,
-            "cutting_force": t.cutting_force,
-            "time": t.time.isoformat()
-        }
+        m_id = t["machine_id"]
         
-        # Add to window for ML
-        if t.machine_id not in telemetry_windows:
-            telemetry_windows[t.machine_id] = []
-        telemetry_windows[t.machine_id].append(t_dict)
-        if len(telemetry_windows[t.machine_id]) > 10:
-            telemetry_windows[t.machine_id] = telemetry_windows[t.machine_id][-10:]
-            
-        # Get ML Inference
-        ml_results = predict_machine_health(telemetry_windows[t.machine_id])
+        # Maintain 10-step rolling window for ML
+        if m_id not in telemetry_windows:
+            telemetry_windows[m_id] = []
+        telemetry_windows[m_id].append(t)
+        if len(telemetry_windows[m_id]) > 10:
+            telemetry_windows[m_id] = telemetry_windows[m_id][-10:]
+
+        # Run AI/ML inference pipeline
+        ml_results = predict_machine_health(telemetry_windows[m_id], criticality="High")
+        
+        t_dict = dict(t)
+        t_dict["time"] = t["time"].isoformat() if hasattr(t["time"], "isoformat") else str(t["time"])
         t_dict.update(ml_results)
         
         message["data"].append(t_dict)
-    
+
     await manager.broadcast(message, 'all')
