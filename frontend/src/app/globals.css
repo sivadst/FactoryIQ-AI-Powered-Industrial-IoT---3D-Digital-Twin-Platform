@@ -49,7 +49,7 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
+  --background: oklch(0.985 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -127,4 +127,16 @@
   html {
     @apply font-sans;
   }
+}
+
+/* Smooth theme transition for all elements */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, box-shadow;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Exclude animations and transforms from the global transition */
+canvas, video, svg, .recharts-surface, .animate-pulse, .animate-bounce, .animate-spin {
+  transition-property: none !important;
 }
