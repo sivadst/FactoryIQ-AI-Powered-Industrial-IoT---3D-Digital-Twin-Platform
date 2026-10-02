@@ -107,12 +107,12 @@ export function DemoControlPanel() {
   return (
     <div className="space-y-4 max-w-7xl mx-auto pb-8">
       {/* Header Bar */}
-      <div className="bg-slate-900 border border-slate-800 p-3 rounded-xl flex items-center justify-between">
+      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-3 rounded-xl flex items-center justify-between shadow-sm dark:shadow-none">
         <div className="flex items-center gap-3">
-          <Sliders className="w-5 h-5 text-red-400" />
+          <Sliders className="w-5 h-5 text-red-500 dark:text-red-400" />
           <div>
-            <h2 className="text-sm font-bold text-white tracking-wide">Interactive Failure Injection & Live Demo Control</h2>
-            <p className="text-xs text-slate-400">Trigger real-time physics-grounded degradation scenarios to test the closed-loop AI system</p>
+            <h2 className="text-sm font-bold text-slate-900 dark:text-white tracking-wide">Interactive Failure Injection & Live Demo Control</h2>
+            <p className="text-xs text-slate-500 dark:text-slate-400">Trigger real-time physics-grounded degradation scenarios to test the closed-loop AI system</p>
           </div>
         </div>
 
@@ -127,9 +127,9 @@ export function DemoControlPanel() {
       </div>
 
       {statusMessage && (
-        <div className="bg-blue-950/70 border border-blue-500/60 text-blue-200 px-4 py-2.5 rounded-xl text-xs flex items-center justify-between shadow-lg">
+        <div className="bg-blue-50 dark:bg-blue-950/70 border border-blue-200 dark:border-blue-500/60 text-blue-700 dark:text-blue-200 px-4 py-2.5 rounded-xl text-xs flex items-center justify-between shadow-sm dark:shadow-lg">
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-cyan-400" />
+            <CheckCircle2 className="w-4 h-4 text-cyan-500 dark:text-cyan-400" />
             <span>{statusMessage}</span>
           </div>
           <button
@@ -142,13 +142,13 @@ export function DemoControlPanel() {
       )}
 
       {/* Target Asset & Severity Controls */}
-      <div className="bg-slate-900 border border-slate-800 p-4 rounded-xl flex flex-wrap items-center justify-between gap-4">
+      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-xl flex flex-wrap items-center justify-between gap-4 shadow-sm dark:shadow-none">
         <div className="flex items-center gap-3">
-          <label className="text-xs text-slate-400 font-semibold uppercase">Target Asset:</label>
+          <label className="text-xs text-slate-500 dark:text-slate-400 font-semibold uppercase">Target Asset:</label>
           <select
             value={selectedMachineId}
             onChange={(e) => setLocalSelectedMachineId(Number(e.target.value))}
-            className="bg-slate-950 border border-slate-700 text-slate-100 text-xs rounded-lg px-3 py-2 font-mono outline-none"
+            className="bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-100 text-xs rounded-lg px-3 py-2 font-mono outline-none"
           >
             {machines.map((m) => (
               <option key={m.id} value={m.id}>
@@ -159,7 +159,7 @@ export function DemoControlPanel() {
         </div>
 
         <div className="flex items-center gap-3">
-          <label className="text-xs text-slate-400 font-semibold uppercase">Fault Severity: <span className="text-red-400 font-mono">{severity}%</span></label>
+          <label className="text-xs text-slate-500 dark:text-slate-400 font-semibold uppercase">Fault Severity: <span className="text-red-500 dark:text-red-400 font-mono">{severity}%</span></label>
           <input
             type="range"
             min={50}
@@ -174,27 +174,27 @@ export function DemoControlPanel() {
       {/* Scenarios Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {failureScenarios.map((sc) => (
-          <Card key={sc.id} className="bg-slate-900 border-slate-800 text-slate-100 flex flex-col justify-between hover:border-slate-700 transition-all">
-            <CardHeader className="p-3.5 pb-2 border-b border-slate-800 flex flex-row items-center justify-between">
-              <CardTitle className="text-xs font-bold text-white flex items-center gap-1.5">
-                <Flame className="w-3.5 h-3.5 text-red-400" />
+          <Card key={sc.id} className="bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-100 flex flex-col justify-between hover:border-slate-300 dark:hover:border-slate-700 transition-all shadow-sm dark:shadow-none">
+            <CardHeader className="p-3.5 pb-2 border-b border-slate-200 dark:border-slate-800 flex flex-row items-center justify-between">
+              <CardTitle className="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                <Flame className="w-3.5 h-3.5 text-red-500 dark:text-red-400" />
                 {sc.name}
               </CardTitle>
             </CardHeader>
 
             <CardContent className="p-3.5 text-xs space-y-3 flex-1 flex flex-col justify-between">
-              <p className="text-slate-400 text-[11px] leading-relaxed">
+              <p className="text-slate-500 dark:text-slate-400 text-[11px] leading-relaxed">
                 {sc.desc}
               </p>
 
               <div>
-                <div className="text-[10px] text-slate-500 mb-2">Target Subsystem: <span className="text-slate-300 font-mono">{sc.targetAsset}</span></div>
+                <div className="text-[10px] text-slate-400 dark:text-slate-500 mb-2">Target Subsystem: <span className="text-slate-600 dark:text-slate-300 font-mono">{sc.targetAsset}</span></div>
                 <button
                   onClick={() => handleInject(sc.id)}
                   disabled={isLoading}
-                  className="w-full flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-red-600/20 hover:bg-red-600/40 text-red-300 text-xs font-semibold border border-red-700/60 transition-all"
+                  className="w-full flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-red-50 dark:bg-red-600/20 hover:bg-red-100 dark:hover:bg-red-600/40 text-red-600 dark:text-red-300 text-xs font-semibold border border-red-200 dark:border-red-700/60 transition-all"
                 >
-                  <Play className="w-3 h-3 text-red-400" />
+                  <Play className="w-3 h-3 text-red-500 dark:text-red-400" />
                   Inject into Machine
                 </button>
               </div>
