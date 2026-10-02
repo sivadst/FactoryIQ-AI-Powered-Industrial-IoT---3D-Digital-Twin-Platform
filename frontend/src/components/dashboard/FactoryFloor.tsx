@@ -294,13 +294,13 @@ function MachineNode({
       {/* Interactive Tooltip on Hover */}
       {hovered && (
         <Html position={[0, 4.8, 0]} center distanceFactor={25}>
-          <div className="bg-slate-900/95 border border-cyan-500/50 backdrop-blur-md px-3 py-2 rounded-lg text-xs text-slate-200 shadow-2xl pointer-events-none min-w-[180px] z-50">
-            <div className="font-bold text-white flex justify-between items-center mb-1 border-b border-slate-700 pb-1">
+          <div className="bg-white/95 dark:bg-slate-900/95 border border-cyan-400/50 dark:border-cyan-500/50 backdrop-blur-md px-3 py-2 rounded-lg text-xs text-slate-700 dark:text-slate-200 shadow-2xl pointer-events-none min-w-[180px] z-50">
+            <div className="font-bold text-slate-900 dark:text-white flex justify-between items-center mb-1 border-b border-slate-200 dark:border-slate-700 pb-1">
               <span>{machine.name}</span>
-              <span className="text-cyan-400 font-mono">{machine.type}</span>
+              <span className="text-cyan-600 dark:text-cyan-400 font-mono">{machine.type}</span>
             </div>
             <div className="grid grid-cols-2 gap-x-2 gap-y-1 text-[11px]">
-              <div>Zone: <span className="text-slate-300 font-semibold">{machine.zone.split('—')[0]}</span></div>
+              <div>Zone: <span className="text-slate-600 dark:text-slate-300 font-semibold">{machine.zone.split('—')[0]}</span></div>
               <div>Health: <span className="text-emerald-400 font-semibold">{machine.health_score}%</span></div>
               <div>Vib RMS: <span className="font-mono text-cyan-300">{telemetryPoint?.vibration_x?.toFixed(2) ?? '--'} mm/s</span></div>
               <div>Spindle: <span className="font-mono text-rose-300">{telemetryPoint?.temperature_spindle?.toFixed(1) ?? '--'}°C</span></div>
@@ -334,7 +334,7 @@ export function FactoryFloor() {
   }, [machines, zoneFilter, statusFilter])
 
   return (
-    <div className="w-full h-full bg-slate-950 rounded-xl overflow-hidden shadow-2xl border border-slate-800 relative">
+    <div className="w-full h-full bg-slate-100 dark:bg-slate-950 rounded-xl overflow-hidden shadow-lg dark:shadow-2xl border border-slate-200 dark:border-slate-800 relative">
       {/* 3D Canvas Viewport */}
       <Canvas shadows camera={{ position: [0, 55, 65], fov: 45 }}>
         <color attach="background" args={['#020617']} />
@@ -399,8 +399,8 @@ export function FactoryFloor() {
       </Canvas>
 
       {/* Floating Heatmap & Camera Mode Overlay */}
-      <div className="absolute top-3 right-3 bg-slate-900/90 backdrop-blur-md border border-slate-700/80 px-3 py-2 rounded-lg text-xs flex items-center gap-2 shadow-xl">
-        <span className="text-slate-400 font-semibold uppercase text-[10px] tracking-wider">Heatmap:</span>
+      <div className="absolute top-3 right-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-700/80 px-3 py-2 rounded-lg text-xs flex items-center gap-2 shadow-lg dark:shadow-xl">
+        <span className="text-slate-500 dark:text-slate-400 font-semibold uppercase text-[10px] tracking-wider">Heatmap:</span>
         {(['STATUS', 'HEALTH', 'RISK', 'TEMP', 'VIBRATION'] as HeatmapMode[]).map((mode) => (
           <button
             key={mode}
@@ -408,7 +408,7 @@ export function FactoryFloor() {
             className={`px-2 py-1 rounded transition-all font-medium text-[11px] ${
               heatmapMode === mode
                 ? 'bg-blue-600 text-white shadow-md'
-                : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
             }`}
           >
             {mode}
@@ -417,7 +417,7 @@ export function FactoryFloor() {
       </div>
 
       {/* Legend Overlay */}
-      <div className="absolute bottom-3 left-3 bg-slate-900/90 backdrop-blur-md border border-slate-700/80 px-3 py-2 rounded-lg text-[11px] text-slate-300 flex items-center gap-4 shadow-xl">
+      <div className="absolute bottom-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-700/80 px-3 py-2 rounded-lg text-[11px] text-slate-600 dark:text-slate-300 flex items-center gap-4 shadow-lg dark:shadow-xl">
         <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-sm" /> Running / Healthy</div>
         <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-amber-500 shadow-sm" /> Idle / Warning</div>
         <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-red-500 shadow-sm animate-pulse" /> Critical / Fault</div>
