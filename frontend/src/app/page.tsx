@@ -122,7 +122,7 @@ export default function Home() {
   }, [router, setMachines, addTelemetryBatch, setAlerts, setWorkOrders, setPlantOEE, setCurrentUser])
 
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-blue-600 selection:text-white">
+    <main className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 flex flex-col font-sans selection:bg-blue-600 selection:text-white">
       {/* Universal Command Center Header */}
       <CommandCenterTopBar />
 
@@ -142,14 +142,14 @@ export default function Home() {
               </div>
               
               {/* Quick Work Orders Sidebar Card */}
-              <Card className="h-44 bg-slate-900 border-slate-800 text-slate-100 flex flex-col justify-between">
-                <CardHeader className="py-2 px-3 border-b border-slate-800 flex flex-row items-center justify-between">
-                  <CardTitle className="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
-                    <Wrench className="w-3.5 h-3.5 text-amber-400" /> Active Maintenance Tasks
+              <Card className="h-44 bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-100 flex flex-col justify-between shadow-sm dark:shadow-none">
+                <CardHeader className="py-2 px-3 border-b border-slate-200 dark:border-slate-800 flex flex-row items-center justify-between">
+                  <CardTitle className="text-xs font-semibold text-slate-500 dark:text-slate-300 flex items-center gap-1.5">
+                    <Wrench className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" /> Active Maintenance Tasks
                   </CardTitle>
                   <button
                     onClick={() => setActiveTab('WORK_ORDERS')}
-                    className="text-[10px] text-cyan-400 hover:text-cyan-300 flex items-center gap-1"
+                    className="text-[10px] text-cyan-600 dark:text-cyan-400 hover:text-cyan-500 dark:hover:text-cyan-300 flex items-center gap-1"
                   >
                     View All <ArrowRight className="w-3 h-3" />
                   </button>
@@ -158,12 +158,12 @@ export default function Home() {
                   {workOrders.filter((w) => w.status !== 'COMPLETED').slice(0, 3).map((wo) => {
                     const m = machines.find((mach) => mach.id === wo.machine_id)
                     return (
-                      <div key={wo.id} className="bg-slate-950 p-2 rounded-lg border border-slate-800/80 text-[11px] flex justify-between items-center">
+                      <div key={wo.id} className="bg-slate-50 dark:bg-slate-950 p-2 rounded-lg border border-slate-200 dark:border-slate-800/80 text-[11px] flex justify-between items-center">
                         <div className="truncate max-w-[170px]">
-                          <span className="font-bold text-white font-mono">{m?.name || `MCH-${wo.machine_id}`}</span>: {wo.title}
+                          <span className="font-bold text-slate-900 dark:text-white font-mono">{m?.name || `MCH-${wo.machine_id}`}</span>: {wo.title}
                         </div>
                         <span className={`px-1.5 py-0.5 rounded text-[9px] font-bold ${
-                          wo.priority === 'CRITICAL' ? 'bg-red-950 text-red-400' : 'bg-amber-950 text-amber-400'
+                          wo.priority === 'CRITICAL' ? 'bg-red-50 dark:bg-red-950 text-red-600 dark:text-red-400' : 'bg-amber-50 dark:bg-amber-950 text-amber-600 dark:text-amber-400'
                         }`}>
                           {wo.priority}
                         </span>
@@ -171,7 +171,7 @@ export default function Home() {
                     )
                   })}
                   {workOrders.filter((w) => w.status !== 'COMPLETED').length === 0 && (
-                    <div className="text-center text-slate-500 text-[11px] py-4">No active maintenance tickets.</div>
+                    <div className="text-center text-slate-400 dark:text-slate-500 text-[11px] py-4">No active maintenance tickets.</div>
                   )}
                 </CardContent>
               </Card>
