@@ -179,16 +179,19 @@ export const useFactoryStore = create<FactoryStore>((set) => ({
 
   addTelemetryBatch: (batch) => set((state) => {
     const newTelemetry = { ...state.telemetry }
-    const updatedMachines = [...state.machines]
+    const updatedMachines = state.machines.map((m) => ({ ...m }))
 
     batch.forEach((t) => {
+      // Clone the array for this machine_id so we never mutate frozen state
       if (!newTelemetry[t.machine_id]) {
         newTelemetry[t.machine_id] = []
+      } else {
+        newTelemetry[t.machine_id] = [...newTelemetry[t.machine_id]]
       }
       newTelemetry[t.machine_id].push(t)
       // Keep last 45 readings for smooth chart animation
       if (newTelemetry[t.machine_id].length > 45) {
-        newTelemetry[t.machine_id].shift()
+        newTelemetry[t.machine_id] = newTelemetry[t.machine_id].slice(1)
       }
 
       // Sync live machine state with telemetry
